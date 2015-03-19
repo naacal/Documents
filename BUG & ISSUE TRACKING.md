@@ -150,3 +150,54 @@ Here at Sifter, we use “Closed” to mean that “there’s no doubt in our mi
 ## SUMMARY
 
 We created Sifter as a simple tool to track issues. It’s flexible enough to handle a wide variety of development and testing arrangements, and we think that Sifter’s workflow options can be a great fit for most teams and their everyday needs.
+
+
+One of the most important parts of keeping bug and issues organized is making sure that everyone is on the same page with regard to statuses and uses them correctly. The most important thing to remember is that&nbsp;issues don’t have to be resolved before they can be closed, and in our case, we frequently skip resolved and go straight to closed if the situation warrants it. There are situations, however, where stopping at resolved is key.
+
+![](https://sifterapp.com/blog/images/2013-04-24-bug-and-issue-tracker-workflow/IssueTrackingWorkflow.png)
+
+1Sifter uses a carefully considered set of statuses to provide a simple and flexible workflow or managing issues.
+
+## VARYING DEGREES OF DONENESS
+
+Before we go into how we do things, let’s talk about the benefits of having two layers of donneness in an issue tracker. With software, the cost of fixing a bug before the software ships is always less than the cost of fixing it after it has shipped. Even with today’s teams that are able to constantly ship new versions all day every day, nobody wants their customers to deal with bugs. So you want to be incredibly sure that when you fix something, you fix it correctly. Moreover, it’s simply more expensive to do something twice than it is do it once.
+
+If you want to make sure that it gets done right the first time, you’ll invariably want a review layer within your workflow. With bugs, “Resolved” represents “Fixed” or “Ready for Review”. In general, a developer will fix a bug and mark it as resolved. Then, the original opener will be able to review the fix and make sure that the developer fixed the problem as expected. If everything looks right, the opener then closes the issue and moves on to the next one. This helps prevent simple miscommunication or other errors from turning into shipping bugs.
+
+## RESOLVED
+
+With our team, “Resolved” generally means that the fix has at least been committed to source control. Any potentially unusual situations with resolved issues are addressed with a detailed explanation, or resolution, in the comments. Don’t underestimate&nbsp;[the importance of writing a clear and detailed resolution](http://sifterapp.com/blog/2012/05/issues-resolution-tracking/). It’s easy to be in a hurry and want to simply close the issue, but taking a few extra seconds to type a detailed resolution can go a long ways to preventing future miscommunication.
+
+Depending on whether it’s a one-off fix or part of a larger release, the fix may even be deployed to staging for easy testing. With small one-off fixes, it’s unlikely that we’d deploy to staging, but when we’re working with larger milestones, we’ll regularly release the most current version of the relevant branch to staging. For us, staging is a sort of shared public space for easy previewing and testing of significant releases for the entire team.
+
+We also use staging as the final step of validating significant infrastructure changes. Our staging environment almost exactly mirrors our production environment, load balancer and all. For instance, if a bug is significant or relies on functionality that works slightly different in development than it does in production, then we never want to close it without reviewing it in staging. So if we make a change to our search indexing or cron jobs, testing in development isn’t enough. In these cases, we’ll mark the issue as resolved. Then, when we’re ready, usually when all other issues in the milestone are closed, we’ll release to staging and run through final checks on all of the resolved issues before closing them out.
+
+There are several types of issues where it makes sense for an issue to stop at “Resolved” before it’s officially closed. This usually depends on the type of issue as well as the people involved. You can classify most of these scenarios as approval or review.
+
+*   Approval.&nbsp;In these scenarios, a decision has been made or a feature implemented where someone needs to approve it. For instance, if a couple of us decide on a course of action that will lead to significant server modifications, we’d want to mark an issue as resolved and wait for our system adminstrator to chime in with his final approval.
+*   Review.&nbsp;In these scenarios, it’s all about having a second set of eyes on things. If the issue opener and assignee are diferent, it’s easy for the developer to incorrectly believe that a bug has been fixed. By having the original opener review the fix or by retesting the issue in our staging environment, we’re able to have a higher degree of confidence that it’s truly fixed.
+
+![](https://sifterapp.com/blog/images/2013-04-24-bug-and-issue-tracker-workflow/ResolvedWorkflow.png)
+
+2When an issue is resolved, we automatically adjust the interface to help visualize the forward progress of closing an issue as well as the nature of taking a step back if you reopen an issue.
+
+Just as it looks in the interface, “Resolved” is a liminal zone where the problem is solved but needs verification or approval to be 100% complete. It’s perfectly valid to reopen the issue and bring the discussion back to life. In our ideas project, we’ll often promote issues to “Resolved” and leave them there until we’re ready to proceed further. We aren’t quite ready to close the issues, but we do want to acknowledge that we’ve tentatively made a decision.
+
+## CLOSED
+
+Once an issue is closed, it’s ready to go. “Closed” doesn’t mean “Live.” It simply means “Closed.” That is, it’s either fixed and has been reviewed or it’s something that doesn’t currently need any further attention. You could say it’s basically like saying, “Nothing more to see here. Move along.” When all issues in a given milestone are closed, it’s a safe bet that the associated branch should be ready for release to production.
+
+Like resolving an issue, there are two subtle variants behind the meaning of “Closed”. Either it’s complete and ready to go live, or it’s something that either isn’t going to happen or is no longer relevant. In either situation, no further attention is required at this time. “Closed” can even work as a sort of “On Hold” status if your team is comfortable using it that way. Remember,&nbsp;[it’s dangerous to explicitly have an “On Hold” status](http://sifterapp.com/blog/2011/07/why-on-hold-is-evil/), and Sifter provides several alternatives to achieve the same goal.
+
+*   Complete.&nbsp;In these scenarios, the issue is both resolved and reviewed. It’s ready to go, and nothing more needs to be done.
+*   Back burner.&nbsp;Closed doesn’t have to imply “fixed.” You can think of closing an issue as a simple way to get rid of an issue if you’re unlikely to do anything about it in the near future.
+
+![](https://sifterapp.com/blog/images/2013-04-24-bug-and-issue-tracker-workflow/ClosedWorkflow.png)
+
+3When an issue is closed, we automatically limit the options and help visually communicate the nature of taking a step backwards when reopening an issue.
+
+It’s easy to forget, but along with closing issues, anyone can always reopen issues. Issues never die, they’re simply moved off of your todo list. They can always be brought back to life with a simple comment. Internally, this happens all of the time as we revisit old ideas or think of new ways of looking at ideas we previously believed weren’t right for Sifter.
+
+## NOTHING IS ABSOLUTE
+
+It’s critical that multiple layers of doneness are available in a bug tracker, but those extra layers are only a suggestion for when it’s relevant to the given issue. Don’t be afraid to close issues or skip the resolution step if there’s no review necessary. It’s structure, but it’s designed to be optional structure. There when you need it. Gone when you don’t.
