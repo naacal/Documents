@@ -1,3 +1,4 @@
+[toc]
 
 # BUG & ISSUE TRACKING
 
