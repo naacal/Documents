@@ -152,6 +152,8 @@ Here at Sifter, we use “Closed” to mean that “there’s no doubt in our mi
 We created Sifter as a simple tool to track issues. It’s flexible enough to handle a wide variety of development and testing arrangements, and we think that Sifter’s workflow options can be a great fit for most teams and their everyday needs.
 
 
+## BUG AND ISSUE TRACKER WORKFLOW
+
 One of the most important parts of keeping bug and issues organized is making sure that everyone is on the same page with regard to statuses and uses them correctly. The most important thing to remember is that&nbsp;issues don’t have to be resolved before they can be closed, and in our case, we frequently skip resolved and go straight to closed if the situation warrants it. There are situations, however, where stopping at resolved is key.
 
 ![](https://sifterapp.com/blog/images/2013-04-24-bug-and-issue-tracker-workflow/IssueTrackingWorkflow.png)
