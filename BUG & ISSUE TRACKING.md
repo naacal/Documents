@@ -1,5 +1,3 @@
-[toc]
-
 # BUG & ISSUE TRACKING
 
 Having thought about this for years, I decided some time ago that if I was going to build an issue tracker that I’d have to start by creating a simple issue life-cycle and workflow. That was the heart of the problem, in my opinion. If the workflow wasn’t simple, the software wouldn’t be either. You might be familiar Conway’s Law which more or less states…
