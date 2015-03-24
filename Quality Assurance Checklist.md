@@ -1,3 +1,5 @@
+## Rules:
+
 ### Check if SEM's are not blocked.
 
 > * Check robots.txt file using [this tool](http://seositecheckup.com/tool/robots)
