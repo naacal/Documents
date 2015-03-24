@@ -1,13 +1,13 @@
 Software Requirements Specification for *PROJECT NAME*
 ======================================================
 
-Version *1.2* *Development*
+Version *0.0* *Status*
 
-Prepared by *B. Radushev*
+Prepared by *Name*
 
-*Taxback*
+*Company*
 
-*24.03.2015*
+*Date*
 
 Table of Contents
 -----------------
